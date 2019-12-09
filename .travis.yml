@@ -18,7 +18,7 @@ after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
     # Take these images and push them to Docker Hub
-    - docker push lucheya/multi-server
-    - docker push lucheya/multi-worker
-    - docker push lucheya/multi-nginx
+    #- docker push lucheya/multi-server
+    #- docker push lucheya/multi-worker
+    #- docker push lucheya/multi-nginx
     - docker push lucheya/multi-client
