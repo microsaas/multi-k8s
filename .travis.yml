@@ -13,10 +13,12 @@ after_success:
     - docker build -t lucheya/multi-server ./server
     - docker build -t lucheya/multi-worker ./worker
     - docker build -t lucheya/multi-nginx ./nginx
+
     # Log in to the Docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
     # Take these images and push them to Docker Hub
-    - docker push lucheya/multi-client
     - docker push lucheya/multi-server
     - docker push lucheya/multi-worker
     - docker push lucheya/multi-nginx
+    - docker push lucheya/multi-client
